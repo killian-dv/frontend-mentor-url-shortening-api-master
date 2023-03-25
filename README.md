@@ -1,5 +1,7 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
 
+![Design preview for the Shortly URL coding challenge](./design/desktop-preview.jpg)
+
 ## Salut! 👋
 
 ⚠️ Défi en cours
