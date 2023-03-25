@@ -1,0 +1,41 @@
+header {
+    .container {
+        @include flex(space-between, center);
+        width: 90%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem 0;
+        @media screen and (min-width: 768px) {
+            @include flex(flex-start, center); 
+        }
+        .navigation {
+            display: none;
+            &.active {
+                @include flex(flex-start, flex-start, 0, column);
+                position: absolute;
+                height: 100vh;
+                z-index: 999;
+            }
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 6px;
+            border: none;
+            background-color: transparent;
+            &:hover {
+                cursor: pointer;
+            }
+            @media screen and (min-width: 768px) {
+                display: none;  
+            }
+            span {
+                width: 35px;
+                height: 5px;
+                background-color: $grayish-violet;
+            }
+        }
+
+    }
+}
