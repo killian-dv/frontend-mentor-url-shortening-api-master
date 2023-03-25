@@ -12,7 +12,7 @@ Il s'agit d'une solution au défi [Shortly URL shortening API Challenge sur Fron
 
 Votre défi consiste à créer cette page d'atterrissage, à l'intégrer à l'API [shrtcode] (https://app.shrtco.de/) et à la rendre aussi proche que possible de la conception.
 
-Vos utilisateurs doivent pouvoir
+Les utilisateurs doivent pouvoir
 
 - Afficher la mise en page optimale du site en fonction de la taille de l'écran de leur appareil
 - Raccourcir n'importe quelle URL valide
