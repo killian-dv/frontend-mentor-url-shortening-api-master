@@ -10,6 +10,15 @@ body {
   font-size: 18px;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
@@ -35,16 +44,113 @@ header .container {
 header .container .navigation {
   display: none;
 }
+header .container .navigation a {
+  font-weight: 700;
+}
 header .container .navigation.active {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
+  align-items: center;
+  gap: 2rem;
   flex-direction: column;
   flex-wrap: nowrap;
   position: absolute;
-  height: 100vh;
+  height: auto;
   z-index: 999;
+  top: 6rem;
+  left: 0;
+  right: 0;
+  background-color: hsl(257, 27%, 26%);
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 2rem;
+}
+header .container .navigation.active nav {
+  border-bottom: 1px solid hsl(257, 7%, 63%);
+  width: 100%;
+  padding-bottom: 2rem;
+}
+header .container .navigation.active nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+header .container .navigation.active .navigation_buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+header .container .navigation.active .navigation_buttons a:last-child {
+  background-color: hsl(180, 66%, 49%);
+  padding: 0.5rem 2rem;
+  width: 100%;
+  border-radius: 50px;
+  color: white;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+header .container .navigation.active .navigation_buttons a:last-child:hover {
+  background-color: #7ce4e4;
+}
+@media screen and (min-width: 768px) {
+  header .container .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-left: 2rem;
+  }
+  header .container .navigation nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  header .container .navigation nav ul li a {
+    color: hsl(257, 7%, 63%);
+    transition: 0.3s ease-in-out;
+  }
+  header .container .navigation nav ul li a:hover {
+    color: hsl(257, 27%, 26%);
+  }
+  header .container .navigation .navigation_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  header .container .navigation .navigation_buttons a {
+    color: hsl(257, 7%, 63%);
+    transition: 0.3s ease-in-out;
+  }
+  header .container .navigation .navigation_buttons a:hover {
+    color: hsl(257, 27%, 26%);
+  }
+  header .container .navigation .navigation_buttons a:last-child {
+    background-color: hsl(180, 66%, 49%);
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    color: white;
+    transition: 0.3s ease-in-out;
+  }
+  header .container .navigation .navigation_buttons a:last-child:hover {
+    background-color: #7ce4e4;
+  }
 }
 header .container .hamburger {
   display: flex;

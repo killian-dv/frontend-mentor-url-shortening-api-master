@@ -10,11 +10,87 @@ header {
         }
         .navigation {
             display: none;
+            a {
+                font-weight: 700;
+            }
             &.active {
-                @include flex(flex-start, flex-start, 0, column);
+                @include flex(flex-start, center, 2rem, column);
                 position: absolute;
-                height: 100vh;
+                height: auto;
                 z-index: 999;
+                top: 6rem;
+                left: 0;
+                right: 0;
+                background-color: $violet;
+                width: 90%;
+                margin: auto;
+                border-radius: 10px;
+                padding: 2rem;
+                nav {
+                    border-bottom: 1px solid $grayish-violet;
+                    width: 100%;
+                    padding-bottom: 2rem;
+                    ul {
+                        @include flex(flex-start, center, 2rem, column);
+                    }
+                }
+                .navigation_buttons {
+                    @include flex(flex-start, center, 2rem, column);
+                    width: 100%;
+                    a {
+                        &:last-child {
+                            background-color: $cyan;
+                            padding: 0.5rem 2rem;
+                            width: 100%;
+                            border-radius: 50px;
+                            color: white;
+                            transition: $transition;
+                            text-align: center;
+                            &:hover {
+                                background-color: lighten($cyan, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (min-width: 768px) {
+                @include flex(space-between, center);
+                width: 100%;
+                margin-left: 2rem;
+                nav {
+                    ul {
+                        @include flex(space-between, center, 2rem);
+                        li {
+                            a {
+                                color: $grayish-violet;
+                                transition: $transition;
+                                &:hover {
+                                    color: $violet;
+                                }
+                            }
+                        }
+                    }
+                }
+                .navigation_buttons {
+                    @include flex(space-between, center, 2rem);
+                    a {
+                        color: $grayish-violet;
+                        transition: $transition;
+                        &:hover {
+                            color: $violet;
+                        }
+                        &:last-child {
+                            background-color: $cyan;
+                            padding: 0.5rem 2rem;
+                            border-radius: 50px;
+                            color: white;
+                            transition: $transition;
+                            &:hover {
+                                background-color: lighten($cyan, 20%);
+                            }
+                        }
+                    }
+                }
             }
         }
         .hamburger {
