@@ -15,3 +15,14 @@
         width: 70%;
     }
 }
+
+%buttonStyle {
+    background-color: $cyan;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    color: white;
+    transition: $transition;
+    &:hover {
+        background-color: lighten($cyan, 20%);
+    }
+}

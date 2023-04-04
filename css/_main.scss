@@ -1,0 +1,65 @@
+main {
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+        padding: 0 2rem;
+    }
+    #section-1 {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        @include flex( center, center, 2rem, column, nowrap);
+        padding: 1rem 2.5rem 4rem;
+        margin-bottom: 5rem;
+        // overflow: hidden;
+        @media screen and (min-width: 768px) {
+            flex-direction: row-reverse;
+            overflow: visible;
+            padding: 1rem 0 4rem;
+        }
+        .hero-image-box {
+            @include flex( center, center);
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: auto;
+            }
+            img {
+                position: relative;
+                width: 150%;
+                right: -30%;
+                @media screen and (min-width: 768px) {
+                    width: 170%;
+                    right: -20%;
+                }
+            }
+        }
+        .hero-text-box {
+            @include flex( center, center, 1rem, column, nowrap);
+            width: 50%;
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: $violet;
+                text-align: center;
+                line-height: 1.2;
+                @media screen and (min-width: 768px) {
+                    font-size: 5rem;
+                    text-align: left;
+                }
+            }
+            p {
+                font-weight: 400;
+                color: $grayish-violet;
+                text-align: center;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    font-size: 1.5rem;
+                }
+            }
+            a {
+                @extend %buttonStyle;
+            }
+        }
+    }
+}
