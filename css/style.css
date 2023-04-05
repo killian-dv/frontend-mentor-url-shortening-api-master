@@ -286,24 +286,46 @@ main #section-2 form {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   padding: 2.5rem;
-  background-image: url(../images/bg-shorten-mobile.svg);
+  background: url(../images/bg-shorten-mobile.svg) no-repeat top right;
   background-color: hsl(257, 27%, 26%);
   border-radius: 15px;
 }
 @media screen and (min-width: 768px) {
   main #section-2 form {
-    background-image: url(../images/bg-shorten-desktop.svg);
+    background: url(../images/bg-shorten-desktop.svg) no-repeat center;
+    background-color: hsl(257, 27%, 26%);
+    background-size: cover;
+    flex-direction: row;
   }
 }
 main #section-2 form input {
   all: unset;
   width: 100%;
   background-color: #fff;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 18px;
   inset: 0;
-  border-radius: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+main #section-2 form button {
+  all: unset;
+  white-space: nowrap;
+  color: #fff;
+  background-color: hsl(180, 66%, 49%);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main #section-2 form button {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    width: 10%;
+  }
 }/*# sourceMappingURL=style.css.map */

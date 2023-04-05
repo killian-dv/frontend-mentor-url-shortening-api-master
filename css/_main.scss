@@ -69,22 +69,41 @@ main {
             width: 90%;
             max-width: 1600px;
             margin: 0 auto;
-            @include flex( center, center, 1rem, row, nowrap);
+            @include flex( center, center, 1rem, column, nowrap);
             padding: 2.5rem;
-            background-image: url(../images/bg-shorten-mobile.svg);
+            background: url(../images/bg-shorten-mobile.svg) no-repeat top right;
             background-color: $violet;
             border-radius: 15px;
             @media screen and (min-width: 768px) {
-                background-image: url(../images/bg-shorten-desktop.svg);
+                background: url(../images/bg-shorten-desktop.svg) no-repeat center;
+                background-color: $violet;
+                background-size: cover;
+                flex-direction: row;
             }
             input {
                 all: unset;
                 width: 100%;
                 background-color: $white;
-                padding: 1rem 2rem;
-                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 18px;
                 inset: 0;
-                border-radius: 15px;
+                border-radius: 10px;
+                box-sizing: border-box;
+            }
+            button {
+                all: unset;
+                white-space:nowrap;
+                color: $white;
+                background-color: $cyan;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+                @media screen and (min-width: 768px) {
+                    min-width: fit-content;
+                    width: 10%;
+                }
             }
         }
     }
