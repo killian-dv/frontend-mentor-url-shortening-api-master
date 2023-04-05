@@ -188,13 +188,8 @@ header .container .hamburger span {
 main {
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
-  main {
-    padding: 0 2rem;
-  }
-}
 main #section-1 {
-  width: 100%;
+  width: 90%;
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
@@ -204,13 +199,13 @@ main #section-1 {
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 1rem 2.5rem 4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 @media screen and (min-width: 768px) {
   main #section-1 {
     flex-direction: row-reverse;
     overflow: visible;
-    padding: 1rem 0 4rem;
+    padding: 0;
   }
 }
 main #section-1 .hero-image-box {
@@ -245,7 +240,12 @@ main #section-1 .hero-text-box {
   gap: 1rem;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 50%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  main #section-1 .hero-text-box {
+    width: 50%;
+  }
 }
 main #section-1 .hero-text-box h1 {
   font-size: 2.5rem;
@@ -272,4 +272,38 @@ main #section-1 .hero-text-box p {
     text-align: left;
     font-size: 1.5rem;
   }
+}
+main #section-2 {
+  background-color: #eff1f7;
+}
+main #section-2 form {
+  position: relative;
+  transform: translateY(-50%);
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 2.5rem;
+  background-image: url(../images/bg-shorten-mobile.svg);
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 15px;
+}
+@media screen and (min-width: 768px) {
+  main #section-2 form {
+    background-image: url(../images/bg-shorten-desktop.svg);
+  }
+}
+main #section-2 form input {
+  all: unset;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  inset: 0;
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */

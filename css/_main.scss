@@ -1,20 +1,16 @@
 main {
     overflow: hidden;
-    @media screen and (min-width: 768px) {
-        padding: 0 2rem;
-    }
     #section-1 {
-        width: 100%;
+        width: 90%;
         max-width: 1600px;
         margin: 0 auto;
         @include flex( center, center, 2rem, column, nowrap);
         padding: 1rem 2.5rem 4rem;
-        margin-bottom: 5rem;
-        // overflow: hidden;
+        margin-bottom: 10rem;
         @media screen and (min-width: 768px) {
             flex-direction: row-reverse;
             overflow: visible;
-            padding: 1rem 0 4rem;
+            padding: 0;
         }
         .hero-image-box {
             @include flex( center, center);
@@ -34,7 +30,10 @@ main {
         }
         .hero-text-box {
             @include flex( center, center, 1rem, column, nowrap);
-            width: 50%;
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
             h1 {
                 font-size: 2.5rem;
                 font-weight: 700;
@@ -59,6 +58,33 @@ main {
             }
             a {
                 @extend %buttonStyle;
+            }
+        }
+    }
+    #section-2 {
+        background-color: #eff1f7;
+        form {
+            position: relative;
+            transform: translateY(-50%);
+            width: 90%;
+            max-width: 1600px;
+            margin: 0 auto;
+            @include flex( center, center, 1rem, row, nowrap);
+            padding: 2.5rem;
+            background-image: url(../images/bg-shorten-mobile.svg);
+            background-color: $violet;
+            border-radius: 15px;
+            @media screen and (min-width: 768px) {
+                background-image: url(../images/bg-shorten-desktop.svg);
+            }
+            input {
+                all: unset;
+                width: 100%;
+                background-color: $white;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                inset: 0;
+                border-radius: 15px;
             }
         }
     }
