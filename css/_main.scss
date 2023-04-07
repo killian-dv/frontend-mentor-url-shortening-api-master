@@ -134,7 +134,7 @@ main {
             }
             .card {
                 @include flex( center, center, 1rem, column, nowrap);
-                width: 32%;
+                width: 100%;
                 height: 100%;
                 background-color: $white;
                 border-radius: 10px;
@@ -142,7 +142,7 @@ main {
                 position: relative;
                 @media screen and (min-width: 768px) {
                     @include flex( center, flex-start, 1rem, column, nowrap);
-                    width: 30%;
+                    width: 32%;
                     margin-bottom: 0;
                 }
                 .card-icon {
@@ -176,11 +176,14 @@ main {
                 &::before {
                     content: '';
                     display: inline-block;
-                    width: 4rem;
-                    height: 0.5rem;
+                    width: 0.5rem;
+                    height: 4rem;
+                    bottom: -4rem;
                     background-color: $cyan;
                     position: absolute;
                     @media screen and (min-width: 768px) {
+                        width: 4rem;
+                        height: 0.5rem;
                         top: 50%;
                         right: -4rem;
                     }

@@ -385,7 +385,7 @@ main #section-3 .cards .card {
   gap: 1rem;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 32%;
+  width: 100%;
   height: 100%;
   background-color: #fff;
   border-radius: 10px;
@@ -400,7 +400,7 @@ main #section-3 .cards .card {
     gap: 1rem;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 30%;
+    width: 32%;
     margin-bottom: 0;
   }
 }
@@ -440,13 +440,16 @@ main #section-3 .cards .card p {
 main #section-3 .cards .card-1::before, main #section-3 .cards .card-2::before {
   content: "";
   display: inline-block;
-  width: 4rem;
-  height: 0.5rem;
+  width: 0.5rem;
+  height: 4rem;
+  bottom: -4rem;
   background-color: hsl(180, 66%, 49%);
   position: absolute;
 }
 @media screen and (min-width: 768px) {
   main #section-3 .cards .card-1::before, main #section-3 .cards .card-2::before {
+    width: 4rem;
+    height: 0.5rem;
     top: 50%;
     right: -4rem;
   }
