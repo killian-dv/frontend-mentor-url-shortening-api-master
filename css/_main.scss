@@ -109,18 +109,97 @@ main {
     }
     #section-3 {
         background-color: #eff1f7;
-        padding-top: 5rem;
+        padding: 2rem 0 4rem;
         h2 {
             @include titre($violet);
             margin-bottom: 1rem;
         }
-        p {
+        .subtitle {
             color: $grayish-violet;
             text-align: center;
             margin: auto;
             width: 90%;
             @media screen and (min-width: 768px) {
                 max-width: 50%;
+            }
+        }
+        .cards {
+            @include flex( center, center, 6rem, column, nowrap);
+            width: 90%;
+            max-width: 1600px;
+            margin: 0 auto;
+            margin-top: 8rem;
+            @media screen and (min-width: 768px) {
+                @include flex( space-between, center, 2rem, row, nowrap);
+            }
+            .card {
+                @include flex( center, center, 1rem, column, nowrap);
+                width: 32%;
+                height: 100%;
+                background-color: $white;
+                border-radius: 10px;
+                padding: 6rem 2rem 3rem;
+                position: relative;
+                @media screen and (min-width: 768px) {
+                    @include flex( center, flex-start, 1rem, column, nowrap);
+                    width: 30%;
+                    margin-bottom: 0;
+                }
+                .card-icon {
+                    @include flex( center, center);
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(-50%);
+                    background-color: $violet;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    img {
+                        width: 50%;
+                    }
+                }
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $violet;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    color: $grayish-violet;
+                    text-align: center;
+                    @media screen and (min-width: 768px) {
+                        text-align: left;
+                    }
+                }
+            }
+            .card-1, .card-2 {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 4rem;
+                    height: 0.5rem;
+                    background-color: $cyan;
+                    position: absolute;
+                    @media screen and (min-width: 768px) {
+                        top: 50%;
+                        right: -4rem;
+                    }
+                }
+            }
+            .card-2 {
+                &::before {
+                    @media screen and (min-width: 768px) {
+                        top: 40%;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    margin-top: 4rem;
+                }
+            }
+            .card-3 {
+                @media screen and (min-width: 768px) {
+                    margin-top: 8rem;
+                }
             }
         }
     }

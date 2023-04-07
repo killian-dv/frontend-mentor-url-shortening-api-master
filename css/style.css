@@ -331,7 +331,7 @@ main #section-2 form button {
 }
 main #section-3 {
   background-color: #eff1f7;
-  padding-top: 5rem;
+  padding: 2rem 0 4rem;
 }
 main #section-3 h2 {
   font-size: 1.5rem;
@@ -345,14 +345,124 @@ main #section-3 h2 {
     font-size: 2.5rem;
   }
 }
-main #section-3 p {
+main #section-3 .subtitle {
   color: hsl(257, 7%, 63%);
   text-align: center;
   margin: auto;
   width: 90%;
 }
 @media screen and (min-width: 768px) {
-  main #section-3 p {
+  main #section-3 .subtitle {
     max-width: 50%;
+  }
+}
+main #section-3 .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+main #section-3 .cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 32%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 6rem 2rem 3rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards .card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+main #section-3 .cards .card .card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+main #section-3 .cards .card .card-icon img {
+  width: 50%;
+}
+main #section-3 .cards .card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(257, 27%, 26%);
+  margin-bottom: 1rem;
+}
+main #section-3 .cards .card p {
+  color: hsl(257, 7%, 63%);
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards .card p {
+    text-align: left;
+  }
+}
+main #section-3 .cards .card-1::before, main #section-3 .cards .card-2::before {
+  content: "";
+  display: inline-block;
+  width: 4rem;
+  height: 0.5rem;
+  background-color: hsl(180, 66%, 49%);
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards .card-1::before, main #section-3 .cards .card-2::before {
+    top: 50%;
+    right: -4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards .card-2::before {
+    top: 40%;
+  }
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards .card-2 {
+    margin-top: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  main #section-3 .cards .card-3 {
+    margin-top: 8rem;
   }
 }/*# sourceMappingURL=style.css.map */
