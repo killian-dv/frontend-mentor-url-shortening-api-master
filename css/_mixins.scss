@@ -17,21 +17,13 @@
     }
 }
 
-%sectionStyle {
-    width: 80%;
-    max-width: 1600px;
-    margin: auto;
-    @media screen and (min-width: 768px) {
-        width: 70%;
-    }
-}
-
 %buttonStyle {
     background-color: $cyan;
     padding: 0.5rem 2rem;
     border-radius: 50px;
     color: white;
     transition: $transition;
+    font-weight: 700;
     &:hover {
         background-color: lighten($cyan, 20%);
     }

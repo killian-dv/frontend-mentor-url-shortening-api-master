@@ -1,0 +1,60 @@
+footer {
+    background-color: $black;
+    padding: 4rem 0;
+    @media screen and (min-width: 768px) {
+        padding: 6rem 0;
+    }
+    .container {
+        width: 90%;
+        max-width: 1600px;
+        margin: auto;
+        @include flex( center, center, 2rem, column, nowrap);
+        @media screen and (min-width: 768px) {
+            @include flex( space-between, flex-start, 2rem, row, nowrap);
+        }
+        .footer-logo {
+            img {
+                filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(354deg) brightness(105%) contrast(108%);
+            }
+        }
+        .footer-links {
+            @include flex( center, center, 2rem, column, nowrap);
+            @media screen and (min-width: 768px) {
+                @include flex( space-between, flex-start, 5rem, row, nowrap);
+            }
+            .footer-links-column {
+                @include flex( center, center, 0.5rem, column, nowrap);
+                @media screen and (min-width: 768px) {
+                    @include flex( center, flex-start, 0.5rem, column, nowrap);
+                }
+                h3 {
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                ul {
+                    @include flex( center, center, 0, column, nowrap);
+                    @media screen and (min-width: 768px) {
+                        @include flex( center, flex-start, 0, column, nowrap);
+                    }
+                    li {
+                        a {
+                            color: $grayish-violet;
+                            font-size: 14px;
+                            font-weight: 400;
+                            transition: $transition;
+                            &:hover {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-social {
+            ul {
+                @include flex( center, center, 1rem, row, nowrap);
+            }
+        }
+    }
+}

@@ -100,16 +100,21 @@ main {
                 width: 100%;
                 box-sizing: border-box;
                 text-align: center;
+                font-weight: 700;
                 @media screen and (min-width: 768px) {
                     min-width: fit-content;
                     width: 10%;
+                }
+                &:hover {
+                    background-color: lighten($cyan, 20%);
+                    cursor: pointer;
                 }
             }
         }
     }
     #section-3 {
         background-color: #eff1f7;
-        padding: 2rem 0 4rem;
+        padding: 2rem 0 6rem;
         h2 {
             @include titre($violet);
             margin-bottom: 1rem;
@@ -128,7 +133,7 @@ main {
             width: 90%;
             max-width: 1600px;
             margin: 0 auto;
-            margin-top: 8rem;
+            margin-top: 6rem;
             @media screen and (min-width: 768px) {
                 @include flex( space-between, center, 2rem, row, nowrap);
             }
@@ -204,6 +209,25 @@ main {
                     margin-top: 8rem;
                 }
             }
+        }
+    }
+    #section-4 {
+        background: url(../images/bg-boost-mobile.svg) no-repeat center;
+        background-size: cover;
+        background-color: $violet;
+        @include flex( center, center, 1rem, column, nowrap);
+        padding: 4rem 1rem;
+        @media screen and (min-width: 768px) {
+            background: url(../images/bg-boost-desktop.svg) no-repeat center;
+            background-size: cover;
+            background-color: $violet;
+        }
+        h2 {
+            @include titre($white);
+            font-size: 2rem;
+        }
+        a {
+            @extend %buttonStyle;
         }
     }
 }

@@ -19,14 +19,15 @@ a {
   color: #fff;
 }
 
-main #section-1 .hero-text-box a {
+main #section-4 a, main #section-1 .hero-text-box a {
   background-color: hsl(180, 66%, 49%);
   padding: 0.5rem 2rem;
   border-radius: 50px;
   color: white;
   transition: 0.3s ease-in-out;
+  font-weight: 700;
 }
-main #section-1 .hero-text-box a:hover {
+main #section-4 a:hover, main #section-1 .hero-text-box a:hover {
   background-color: #7ce4e4;
 }
 
@@ -321,6 +322,7 @@ main #section-2 form button {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   main #section-2 form button {
@@ -329,9 +331,13 @@ main #section-2 form button {
     width: 10%;
   }
 }
+main #section-2 form button:hover {
+  background-color: #7ce4e4;
+  cursor: pointer;
+}
 main #section-3 {
   background-color: #eff1f7;
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 6rem;
 }
 main #section-3 h2 {
   font-size: 1.5rem;
@@ -366,7 +372,7 @@ main #section-3 .cards {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 @media screen and (min-width: 768px) {
   main #section-3 .cards {
@@ -468,4 +474,144 @@ main #section-3 .cards .card-1::before, main #section-3 .cards .card-2::before {
   main #section-3 .cards .card-3 {
     margin-top: 8rem;
   }
+}
+main #section-4 {
+  background: url(../images/bg-boost-mobile.svg) no-repeat center;
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 4rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  main #section-4 {
+    background: url(../images/bg-boost-desktop.svg) no-repeat center;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+  }
+}
+main #section-4 h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  main #section-4 h2 {
+    font-size: 2.5rem;
+  }
+}
+footer {
+  background-color: #000;
+  padding: 4rem 0;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 6rem 0;
+  }
+}
+footer .container {
+  width: 90%;
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+footer .container .footer-logo img {
+  filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(354deg) brightness(105%) contrast(108%);
+}
+footer .container .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  footer .container .footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+footer .container .footer-links .footer-links-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  footer .container .footer-links .footer-links-column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+footer .container .footer-links .footer-links-column h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+footer .container .footer-links .footer-links-column ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  footer .container .footer-links .footer-links-column ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+footer .container .footer-links .footer-links-column ul li a {
+  color: hsl(257, 7%, 63%);
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+}
+footer .container .footer-links .footer-links-column ul li a:hover {
+  color: #fff;
+}
+footer .container .footer-social ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }/*# sourceMappingURL=style.css.map */
