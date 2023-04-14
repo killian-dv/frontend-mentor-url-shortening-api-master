@@ -285,7 +285,7 @@ main #section-2 form {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -302,7 +302,16 @@ main #section-2 form {
     flex-direction: row;
   }
 }
-main #section-2 form input {
+main #section-2 form .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+main #section-2 form .input-container input {
   all: unset;
   width: 100%;
   background-color: #fff;
@@ -311,6 +320,26 @@ main #section-2 form input {
   inset: 0;
   border-radius: 10px;
   box-sizing: border-box;
+  border: none;
+}
+main #section-2 form .input-container input::-moz-placeholder {
+  color: hsl(257, 7%, 63%);
+}
+main #section-2 form .input-container input::placeholder {
+  color: hsl(257, 7%, 63%);
+}
+main #section-2 form .input-container .error::-moz-placeholder {
+  color: #fbc1c1;
+}
+main #section-2 form .input-container .error::placeholder {
+  color: #fbc1c1;
+}
+main #section-2 form .input-container span {
+  margin-top: 0.5rem;
+  color: hsl(0, 87%, 67%);
+  font-style: italic;
+  font-size: 1rem;
+  display: none;
 }
 main #section-2 form button {
   all: unset;

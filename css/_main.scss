@@ -69,7 +69,7 @@ main {
             width: 90%;
             max-width: 1600px;
             margin: 0 auto;
-            @include flex( center, center, 1rem, column, nowrap);
+            @include flex( center, flex-start, 1rem, column, nowrap);
             padding: 2.5rem;
             background: url(../images/bg-shorten-mobile.svg) no-repeat top right;
             background-color: $violet;
@@ -80,15 +80,33 @@ main {
                 background-size: cover;
                 flex-direction: row;
             }
-            input {
-                all: unset;
+            .input-container {
+                @include flex( center, flex-start, 0rem, column, nowrap);
                 width: 100%;
-                background-color: $white;
-                padding: 1rem 1.5rem;
-                font-size: 18px;
-                inset: 0;
-                border-radius: 10px;
-                box-sizing: border-box;
+                input {
+                    all: unset;
+                    width: 100%;
+                    background-color: $white;
+                    padding: 1rem 1.5rem;
+                    font-size: 18px;
+                    inset: 0;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    border: none;
+                    &::placeholder {
+                        color: $grayish-violet;
+                    }
+                }
+                .error::placeholder {
+                    color: lighten($red, 20%);
+                }
+                span {
+                    margin-top: 0.5rem;
+                    color: $red;
+                    font-style: italic;
+                    font-size: 1rem;
+                    display: none;
+                }
             }
             button {
                 all: unset;
