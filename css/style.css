@@ -364,6 +364,41 @@ main #section-2 form button:hover {
   background-color: #7ce4e4;
   cursor: pointer;
 }
+main #section-2 .links-list {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+main #section-2 .links-list li {
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+main #section-2 .links-list li span {
+  color: hsl(257, 27%, 26%);
+}
+main #section-2 .links-list li a {
+  color: hsl(180, 66%, 49%);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+main #section-2 .links-list li a:hover {
+  text-decoration: underline;
+}
+main #section-2 .links-list li button {
+  all: unset;
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
 main #section-3 {
   background-color: #eff1f7;
   padding: 2rem 0 6rem;
